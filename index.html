@@ -7,15 +7,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SOLID demo</title>
   <style>
-    
+    .widget{
+      border: 2px solid gold;
+      display: inline-block;
+      padding: 4px;
+    }
+    .widget-img{
+      width: 50px;
+    }
   </style>
 </head>
 
 <body>
-
+  <div id="rate-widget"></div>
   <script src="widget.js"></script>
   <script>
-  
+    let rate = new Rate("#rate-widget");
+    rate.render();
   </script>
 </body>
 
