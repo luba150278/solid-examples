@@ -8,14 +8,9 @@
   <title>SOLID demo</title>
   <style>
     .widget {
-      border: 2px solid gold;
       display: inline-block;
       padding: 4px;
       margin: 10px;
-    }
-
-    .widget-weather {
-      border-color: lightgray;
     }
 
     .widget-img {
@@ -23,14 +18,18 @@
     }
     .widget-wrap{
       display: inline-block;
+      border: 2px solid gold;
+    }
+    .widget-weather-wrap {
+      border-color: lightgray;
     }
   </style>
 </head>
 
 <body>
   <div id="rate-widget" class="widget-wrap"></div>
-  <div id="moon-widget"></div>
-  <div id="rate-and-moon-widget"></div>
+  <div id="moon-widget" class="widget-wrap widget-weather-wrap"></div>
+  <div id="rate-and-moon-widget" class="widget-wrap"></div>
   <div id="ratebe-widget" class="widget-wrap"></div>
   <script src="widget.js"></script>
   <script>
