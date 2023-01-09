@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SOLID demo</title>
+  <style>
+    .widget-img-wrap {
+      float: right;
+      padding: 0 10px;
+      text-align: center;
+    }
+
+    .widget-img {
+      width: 50px;
+    }
+
+    #rate-and-moon-widget {
+      padding: 4px 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="rate-widget"></div>
+  <div id="moon-widget"></div>
+  <div id="rate-and-moon-widget"></div>
+  <script src="widget.js"></script>
+  <script>
+    let widget = new WidgetMaker(
+      new Rate("#rate-widget"),
+      new Moon("#moon-widget"),
+      new RateBE("#rate-and-moon-widget"),
+    );
+    widget.render();
+  </script>
+</body>
+
+</html>
