@@ -67,11 +67,9 @@ class RateBE extends Rate {
       .then(jE => {
         const rateE = Math.round(jE.rates.USD * 100) / 100;
         const div = document.createElement('DIV');
-        div.style.float = "right";
-        div.style.padding = "0 4px";
-        div.style.textAlign = "center";
+        div.className = "widget";
         div.innerHTML = `<img src='euro.png' class='widget-img'/><br/><b>$${rateE}</b>`;
-        this.element.firstChild.insertBefore(div, this.element.firstChild.firstChild);
+        this.element.appendChild(div);
       });
   }
 }

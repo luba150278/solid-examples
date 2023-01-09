@@ -21,14 +21,17 @@
     .widget-img {
       width: 50px;
     }
+    .widget-wrap{
+      display: inline-block;
+    }
   </style>
 </head>
 
 <body>
-  <div id="rate-widget"></div>
+  <div id="rate-widget" class="widget-wrap"></div>
   <div id="moon-widget"></div>
   <div id="rate-and-moon-widget"></div>
-  <div id="ratebe-widget"></div>
+  <div id="ratebe-widget" class="widget-wrap"></div>
   <script src="widget.js"></script>
   <script>
     let widget = new WidgetMaker(
