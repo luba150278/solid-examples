@@ -7,15 +7,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SOLID demo</title>
   <style>
-    .widget{
+    .widget {
       border: 2px solid gold;
       display: inline-block;
       padding: 4px;
+      margin: 10px;
     }
-    .widget-weather{
+
+    .widget-weather {
       border-color: lightgray;
     }
-    .widget-img{
+
+    .widget-img {
       width: 50px;
     }
   </style>
@@ -23,10 +26,17 @@
 
 <body>
   <div id="rate-widget"></div>
+  <div id="moon-widget"></div>
+  <div id="rate-and-moon-widget"></div>
   <script src="widget.js"></script>
   <script>
-    let rate = new Rate("#rate-widget");
-    rate.render();
+    let widget = new WidgetMaker(
+      new Rate("#rate-widget"),
+      new Moon("#moon-widget"),
+      new Rate("#rate-and-moon-widget"),
+      new Moon("#rate-and-moon-widget"));
+
+    widget.render();
   </script>
 </body>
 

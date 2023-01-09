@@ -1,3 +1,11 @@
+class WidgetMaker {
+  constructor(...widgets) {
+      this.widgets = widgets;
+  }
+  render() {
+      this.widgets.forEach( w => w.render() ) ;
+  }
+}
 class Rate {
   element;
   constructor(selector) {
@@ -18,6 +26,19 @@ class Rate {
         <b>$ ${rate}</b>`
         this.element.appendChild(div);
       })
+  }
+}
+
+class Moon {
+  element;
+  constructor(selector) {
+    const element = document.querySelector(selector)
+    if (!element) {
+      throw `This element ${element} not found`;
+    }
+    this.element = element
+  }
+  render() {
       const date  = new Date() ;
       const year  = date.getFullYear() ;
       const month = date.getMonth() + 1 ;
