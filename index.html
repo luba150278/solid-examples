@@ -28,13 +28,15 @@
   <div id="rate-widget"></div>
   <div id="moon-widget"></div>
   <div id="rate-and-moon-widget"></div>
+  <div id="ratebe-widget"></div>
   <script src="widget.js"></script>
   <script>
     let widget = new WidgetMaker(
       new Rate("#rate-widget"),
       new Moon("#moon-widget"),
       new Rate("#rate-and-moon-widget"),
-      new Moon("#rate-and-moon-widget"));
+      new Moon("#rate-and-moon-widget"),
+      new RateBE("#ratebe-widget"),);
 
     widget.render();
   </script>
